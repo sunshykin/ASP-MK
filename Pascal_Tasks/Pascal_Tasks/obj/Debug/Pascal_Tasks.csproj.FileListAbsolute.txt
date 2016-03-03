@@ -1,0 +1,6 @@
+C:\VS Coding\Pascal_Tasks\Pascal_Tasks\bin\Debug\Pascal_Tasks.exe.config
+C:\VS Coding\Pascal_Tasks\Pascal_Tasks\bin\Debug\Pascal_Tasks.exe
+C:\VS Coding\Pascal_Tasks\Pascal_Tasks\bin\Debug\Pascal_Tasks.pdb
+C:\VS Coding\Pascal_Tasks\Pascal_Tasks\obj\Debug\Pascal_Tasks.csprojResolveAssemblyReference.cache
+C:\VS Coding\Pascal_Tasks\Pascal_Tasks\obj\Debug\Pascal_Tasks.exe
+C:\VS Coding\Pascal_Tasks\Pascal_Tasks\obj\Debug\Pascal_Tasks.pdb
