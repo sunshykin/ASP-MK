@@ -1,0 +1,11 @@
+﻿<title>Books</title>
+    <h1>Books Page</h1>
+    <div> 
+        <ul>
+            @foreach (var book in Model)
+            {
+                <li>@(book.Author+" "+book.Description+" "+book.Name)</li>
+            }
+            
+        </ul>
+    </div>
