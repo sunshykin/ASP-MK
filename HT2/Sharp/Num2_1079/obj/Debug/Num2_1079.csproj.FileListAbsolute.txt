@@ -1,0 +1,5 @@
+C:\VS Coding\Sharp\Num2_1079\bin\Debug\Num2_1079.exe.config
+C:\VS Coding\Sharp\Num2_1079\bin\Debug\Num2_1079.exe
+C:\VS Coding\Sharp\Num2_1079\bin\Debug\Num2_1079.pdb
+C:\VS Coding\Sharp\Num2_1079\obj\Debug\Num2_1079.exe
+C:\VS Coding\Sharp\Num2_1079\obj\Debug\Num2_1079.pdb

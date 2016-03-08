@@ -1,0 +1,6 @@
+C:\VS Coding\Sharp\Num1_1409\bin\Debug\Num1_1409.exe.config
+C:\VS Coding\Sharp\Num1_1409\bin\Debug\Num1_1409.exe
+C:\VS Coding\Sharp\Num1_1409\bin\Debug\Num1_1409.pdb
+C:\VS Coding\Sharp\Num1_1409\obj\Debug\Num1_1409.csprojResolveAssemblyReference.cache
+C:\VS Coding\Sharp\Num1_1409\obj\Debug\Num1_1409.exe
+C:\VS Coding\Sharp\Num1_1409\obj\Debug\Num1_1409.pdb

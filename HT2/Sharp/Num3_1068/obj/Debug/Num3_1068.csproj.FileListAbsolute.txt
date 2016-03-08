@@ -1,0 +1,5 @@
+C:\VS Coding\Sharp\Num3_1068\bin\Debug\Num3_1068.exe.config
+C:\VS Coding\Sharp\Num3_1068\bin\Debug\Num3_1068.exe
+C:\VS Coding\Sharp\Num3_1068\bin\Debug\Num3_1068.pdb
+C:\VS Coding\Sharp\Num3_1068\obj\Debug\Num3_1068.exe
+C:\VS Coding\Sharp\Num3_1068\obj\Debug\Num3_1068.pdb
