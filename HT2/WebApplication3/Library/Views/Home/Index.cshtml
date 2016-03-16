@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Library.Models.BookModel>
+@section Title {
+    Список книг
+}
+<table class="table">
+    <tr>
+        <th>
+            Автор
+        </th>
+        <th>
+            Название
+        </th>
+        <th>
+            Кол-во
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @{
+                    if (Library.Content.Global.UserId != 0)
+                    {
+                        if (!Library.Content.Check.BookGot(item.Id, Library.Content.Global.UserId) && item.Amount > 0)
+                        {
+                            <button name="TakeBtn" title="Взять себе экземпляр книги">
+                                <a class="button-link" href="../Home/Take/@item.Id">Взять</a>
+                            </button>
+                        }
+                        else if (Library.Content.Check.BookGot(item.Id, Library.Content.Global.UserId))
+                        {
+                            <button name="TakeBtn" title="Вы уже взяли экземпляр этой книги" disabled>
+                                Взять
+                            </button>
+                        }
+                        else if (item.Amount == 0)
+                        {
+                            <button name="TakeBtn" title="Все экземпляры на руках" disabled>
+                                Взять
+                            </button>
+                        }
+                    }
+                }
+            </td>
+            @{
+                if (Library.Content.Global.UserId != 0 && Library.Content.Global.UserId == Library.Content.Global.AdminId)
+                {
+                    <td>
+                        <button name="DeleteBtn">
+                            <a class="button-link" href="../Home/Delete/@item.Id">Удалить книгу</a>
+                        </button>
+                    </td>
+                }
+            }
+
+        </tr>
+    }
+
+</table>
+@{ if (Library.Content.Global.UserId != 0 && Library.Content.Global.UserId == Library.Content.Global.AdminId)
+    {
+        <div class="create-btn">
+            <button>
+                <a class="button-link" href="../Home/Create">Добавить книгу</a>
+            </button>
+        </div>
+    }
+}

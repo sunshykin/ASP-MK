@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Library.Models.UserModel>
+
+@section Title {
+    Статистика взятых книг
+}
+    @{
+        if (Library.Content.Global.UserId == 0)
+        {
+            <p>@Html.ActionLink("Зарегистрироваться", "register") / @Html.ActionLink("Войти", "enter")</p>
+        }
+    }
+<table class="table">
+    <tr>
+        <th>
+            Имя
+        </th>
+        <th>
+            Никнейм
+        </th>
+        <th>
+            Книги на руках:
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nick)
+            </td>
+            <td>
+                @{
+                    if (!item.Books.Any())
+                    {
+                        <p>Не брал книг.</p>
+                    }
+                    else
+                    {
+                        <p>
+                            @foreach (var book in item.Books)
+                            {
+                                string text = " '" + book.Title;
+                                if (item.Books.ToArray()[item.Books.Count - 1].Id != book.Id)
+                                {
+                                    text += "',";
+                                }
+                                else
+                                {
+                                    text += "'.";
+                                }
+                                @text
+                            }
+                        </p>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>
+<div>
+    @Html.ActionLink("Статистика", "page") | @Html.ActionLink("Список книг", "Index", "Home")
+</div>

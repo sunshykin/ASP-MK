@@ -1,0 +1,40 @@
+﻿@using Library.Content.Base;
+@model Library.Models.UserModel
+@section Title {
+    Личный кабинет @Open.db.Users.Find(Library.Content.Global.UserId).Nick
+}
+<div>
+    <p>
+        Добро пожаловать, @Open.db.Users.Find(Library.Content.Global.UserId).FirstName!
+    </p>
+</div>
+<div>
+    <h3>Ваши книги:</h3>
+    <table class="table">
+            @if (!Open.db.Users.Find(Library.Content.Global.UserId).Books.Any())
+                {
+                    <tr>
+                        <p>Вы не взяли ни одной книги. @Html.ActionLink("Возьмите", "Index", "Home") прямо сейчас!</p>
+                    </tr>
+            }
+            else
+            {
+                foreach (var book in Open.db.Users.Find(Library.Content.Global.UserId).Books)
+                {
+                    <tr>
+                        <td>
+                            <p><h4>Автор</h4>: @(Html.DisplayFor(modelItem => book.Author)).</p>
+                        </td>
+                        <td>
+                            <p><h4>Название</h4>: "@Html.DisplayFor(modelItem => book.Title)".</p>
+                        </td>
+                        <td>
+                            <button name="ReturnBtn">
+                                <a class="button-link" href="../Home/Return/@book.Id" title="Вернуть экземпляр книги в библиотеку">Вернуть</a>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+</table>
+</div>
